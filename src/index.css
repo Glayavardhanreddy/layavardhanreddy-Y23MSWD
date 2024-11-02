@@ -1,0 +1,92 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body style */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar styling */
+.top-bar {
+  background-color: #a10af3;
+  color: #f4f4f9;
+  text-align: center;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-bar h1 {
+  font-size: 1.5em;
+}
+
+/* Navigation styling */
+nav {
+  background-color: #333;
+  padding: 2em 1em;
+  height: 100vh;
+  position: fixed;
+  top: 3.5em; /* Adjust to be below the top bar */
+  left: 0;
+  width: 200px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav ul li {
+  margin: 1em 0;
+}
+
+nav ul li a {
+  color: #f4f4f9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #a10af3;
+}
+
+/* Main content styling */
+.main-content {
+  margin-left: 220px; /* To provide space for the sidebar */
+  padding: 2em;
+  max-width: 800px;
+  margin-top: 4em; /* Adjust to account for the top bar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;
+  }
+
+  nav ul {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .main-content {
+      margin-left: 0;
+  }
+}
